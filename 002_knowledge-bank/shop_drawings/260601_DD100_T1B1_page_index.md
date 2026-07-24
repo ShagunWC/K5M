@@ -1,6 +1,11 @@
-# DD100 T1B1 — Page Index
+# DD100 T1B1 — Page Index (as of 2026-06-01 issue)
+
+**This indexes the DD100 revision dated 01.06.2026 — the first/current version received from the client as of this writing (reviewed 2026-07-24).** Drawings will get revised. When a new revision arrives: do **not** edit or overwrite this file — create a new file `<YYMMDD>_DD100_T1B1_page_index.md` for the new revision, and add a line below noting what changed between versions. This file stays as the permanent record of what the DD100 issue looked like on 01.06.2026.
 
 Source file: `20260601_DD100_T1B1.pdf` (69 pages, dated 01.06.2026, Gilles & Boissier, DD100 phase). Original in `001_inbox`.
+
+## Revision history
+- 2026-06-01 issue (this file): first version reviewed and indexed.
 
 Page-to-drawing-code mapping below is derived from a full page-by-page read, and cross-validated against the page references already cited in the `RFI_Fitout Data` sheet (SharePoint COC) — every RFI page citation checked matched this table exactly.
 

@@ -1,6 +1,15 @@
-# T1B1 Material Cross-Reference
+# T1B1 Material Cross-Reference (baseline — first versions received)
 
-Answers "where is material X used" and "what material is on DD100 page N" in one lookup, instead of re-reading source PDFs each time. Built from: `LISTE DES MATÉRIAUX` (architectural), `LISTE DES MATÉRIAUX MOBILIER` (FF&E), `LISTE MATÉRIAUX SOUPLES` (fabric), the RFI sheet's own page citations, and `shop_drawings/DD100_T1B1_page_index.md`.
+Answers "where is material X used" and "what material is on DD100 page N" in one lookup, instead of re-reading source PDFs each time.
+
+**This reflects the first version of each source document received from the client, as reviewed 2026-07-24 — not a living/auto-updating merge.** Material lists and drawings will get revised over the life of this project. When a source document changes: do not silently edit the rows below in place. Instead, add a dated changelog entry at the bottom noting exactly what changed and why, so this file keeps recording what the *first* version looked like, not just the latest guess. If a change is significant enough that the old data is actively misleading, move the superseded rows to an "Superseded" section rather than deleting them.
+
+**Source documents indexed here, with their dates:**
+- `LISTE DES MATÉRIAUX` (architectural materials) — dated 27.10.2025
+- `LISTE DES MATÉRIAUX MOBILIER` (FF&E materials) — undated in the source file itself; FF&E item drawings referencing these codes are dated between 2025.08.26 and 2026.01.23
+- `LISTE MATÉRIAUX SOUPLES` (fabric/soft materials) — dated 03.03.2026
+- RFI sheet page citations (`RFI_Fitout Data`, SharePoint) — dated 15.07.2026
+- `260601_DD100_T1B1_page_index.md` — DD100 issue dated 01.06.2026
 
 ## Architectural materials (A- prefix)
 
@@ -61,4 +70,7 @@ Answers "where is material X used" and "what material is on DD100 page N" in one
 - This table currently covers **T1B1 only**. T2B2 and corridor/lobby materials are not yet cross-referenced.
 
 ## How to extend this
-When a new drawing or material list is reviewed, add rows here rather than creating a parallel document — this file is meant to be the single place that answers "where is material X" for the whole project, growing over time.
+When a new drawing or material list is reviewed **for an area/room type not yet covered**, add new rows here rather than creating a parallel document. When an **existing** source document gets revised, log it below instead of overwriting the rows above.
+
+## Changelog
+- 2026-07-24: Initial baseline built from the first versions of all source documents listed above.
