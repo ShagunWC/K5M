@@ -12,20 +12,21 @@ A hotel project for Wood Couture, covering two related but distinct scopes:
 
 ## Where this repo came from
 
-An older repo (`ShagunWC/K5M_FFE-_COC-_Management`, branch `building-COC-Version-00`) held prior FF&E COC work (versions V01–V04) and a Fit-out scope audit draft. It was reviewed for context but **not migrated** — this repo (`ShagunWC/K5M`) is a deliberate clean start, decided 2026-07-24 since the prior work was only ~3 weeks old.
+An older repo (`ShagunWC/K5M_FFE-_COC-_Management`, branch `building-COC-Version-00`) existed prior to this one. It is **not a reference source** — the user found it explained nothing meaningfully and is deleting that branch. Do not cite it, its version history (V01–V04), or its Fit-out scope audit draft as fact. Anything from it that turned out to still be true was independently re-confirmed from live sources below; anything not re-confirmed should be treated as unknown, not assumed.
 
-## What we know about the project so far (from the old repo's content)
+## Authoritative sources going forward
 
-**FF&E COC:** Master SKU List + Material List (French/English) + Data Sheet + SHD Sheet. As of the old repo: 26 Master SKU products, 13 with V00 drawings, all pending technical/client review, zero cleared for production. Version history V01 (base) → V02 (shop drawing linkage) → V03 (SHD tracker) → V04 (formal SHD version workflow V00→V01→V02 + final verification checkpoints).
+- **A live SharePoint COC system already exists for K5M**, independent of this git repo, accessed here via a `sharepoint_coc_server` MCP connector: project folder `K5M`, containing `261507_K5M_COC_Fitout.xlsx` and `261307_K5M_COC_FFE.xlsx` (both last modified 2026-07-17). The Fitout workbook has a `RFI_Fitout Data` sheet (dated 15.07.2026) with detailed line-by-line scope understanding and open questions to G&B — this appears to be the same document the user separately shared via a OneDrive link, pending cross-check.
+- **Source documents shared directly by the user from 2026-07-24 onward** (BOQ, drawings, kickoff-meeting email, etc.) — see `DAILY_LOG.md` for what's been reviewed.
+- Whether the SharePoint COC system should be treated as *the* live source of truth (vs. this git repo, or alongside it) is an open question — see below.
 
-**Fit-out COC (still a scoping draft, not yet built):** Current priority is the **T1B1 mock-up room**. Key facts from the scope audit:
-- Source precedence: awarded BOQ → latest architectural drawings → approved RFI → approved material package → site survey/V01 drawings → FF&E-transferred items as separate lines.
-- Scope groups: (A) Hall/Elevator Lobby/Corridors, (B) T1B1 Entrance, (C) T1B1 Bathroom/WC/Shower, (D) T1B1 Bedroom.
-- Six FF&E products flagged as possibly transferred into fit-out scope, pending commercial reconciliation.
-- Schedule: Fit-out V00 + prelim material package due 24 Aug 2026; site survey 31 Aug 2026; **overall room-complete target of 15 Nov 2026 flagged as at risk**.
-- Six open decisions listed in the audit (full scope vs. T1B1-only first, corridor DD-package gap, carpet scope confirmation, etc.) — not yet resolved as of this writing.
+## What we've actually confirmed so far
 
-**This repo does not yet contain the actual BOQ, RFI, or COC workbook files** — those are about to be shared and walked through.
+- **Project:** K5M = internal code for a Park Hyatt Casablanca renovation. Designer: Gilles & Boissier (G&B). Owner's rep: Interedec Maroc. Executive Architect: Adil Mokaddem. Production Partner: Wood Couture.
+- **Commercial status:** Wood Couture's revised proposal (29 Jun 2026) selected as the working basis for FF&E/Fit-Out guestrooms. A full T1B1 mock-up room must be completed and ready for review by **30 November 2026** (critical contractual milestone per the kickoff email thread — reconcile against any other date found elsewhere before relying on either).
+- **BOQ (T1B1, current):** FF&E sheet totals $24,724.89 across 24 line items; Fit-out sheet totals $122,069.58 across Hall/Corridor, Entrance, Bathroom, and Bedroom scope groups.
+- **RFI:** ~26 open line items with the team's understanding and questions back to G&B, covering the same Hall/Entrance/Bathroom/Bedroom scope groups as the BOQ.
+- **Known open issue:** the Schematic Design set shows two bedroom furniture options (A/B) sharing identical FF&E codes despite being physically different pieces; Option A (table lamp, not pendant) matches what's actually priced in the confirmed FF&E BOQ.
 
 ## Repo structure (full detail in `README.md`, this branch)
 
@@ -41,5 +42,7 @@ User is about to share the BOQ (Bill of Quantities), then walk through the rest 
 
 ## Open items / not yet decided
 
-- The six open decisions listed in the Fit-out scope audit (above) — status unconfirmed in this repo.
+- Whether the SharePoint COC system is the live source of truth going forward, and how it relates to this git repo.
+- Cross-check pending: does the OneDrive-linked RFI match the SharePoint `RFI_Fitout Data` sheet exactly? (Blocked on Microsoft 365 MCP authentication — user needs to run `/mcp` and authorize it.)
+- Resolving the bedroom Option A/B FF&E code collision (see above) so codes map to one physical product each.
 - Whether/how the FF&E COC and Fit-out COC ultimately relate (kept fully separate trackers under `003_trackers`, most likely, but not explicitly re-confirmed since rebuild).
