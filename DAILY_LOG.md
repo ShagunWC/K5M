@@ -4,6 +4,9 @@ Newest entry at the top. One entry per day, added by whoever (or whichever LLM s
 
 ---
 
+## 2026-07-24 (end of session)
+Added `002_knowledge-bank/shop_drawings/260601_DD100_T1B1_page_index.md` (full page-to-drawing-code index, date-locked so future DD100 revisions get their own file instead of overwriting this baseline) and `002_knowledge-bank/materials/T1B1_material_cross_reference.md` (material code → every location/page it's used, also baseline-locked with a changelog instead of in-place edits). Copied the actual first-received client package (BOQ, DD100 zip, Schematic Design PDF, FF&E item drawings zip) into `001_inbox/260724_T1B1_first_client_package/` — previously only reviewed from the user's Desktop, never actually preserved in the repo. Added `SESSION_START.md` to `main` with the exact prompt to paste at the start of any future session (this machine or another) to get fully caught up before doing anything else. User's plan: pick back up Monday with a project update; this repo should already be fully "git-ready" for that — nothing further needed before then.
+
 ## 2026-07-24
 Repo structure designed and agreed: 7 branches (`main`, `001_inbox`, `002_knowledge-bank`, `003_trackers`, `004_communication`, `005_project-discovery`, `006_task-management-pm`). Folder numbering, tracker file-naming convention (`YYMMDD_ProjectCode_Category_SpecificName`), and the security protocol (project code only, "Production Partner" only, brand guidelines) were defined. Decided against migrating the old `building-COC-Version-00` branch content — clean start on this new repo. Scaffolding files (README, SECURITY_PROTOCOL, this log) created for the `main` branch.
 
