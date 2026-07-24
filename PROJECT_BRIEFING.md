@@ -6,9 +6,11 @@ Read `SECURITY_PROTOCOL.md` in this branch too, before touching anything else.
 
 ## What K5M is
 
-A hotel project for Wood Couture, covering two related but distinct scopes:
+**Flagged 2026-07-24: the user said this description is "not fully correct" — exact correction not yet given. Do not treat the wording below as settled; update once clarified.**
+
+A hotel project (Park Hyatt Casablanca) that Wood Couture is executing as Production Partner, covering two related but distinct scopes:
 - **FF&E** (Furniture, Fixtures & Equipment) — the more mature workstream, tracked via the COC (Control Centre) workbook.
-- **Fit-out** — a newer, still-being-scoped workstream (stone/timber/metal/glass work across corridors, T1B1 entrance/bathroom/bedroom, etc.), with its own COC being planned.
+- **Fit-out** — stone/timber/metal/glass work across corridors, T1B1 entrance/bathroom/bedroom, etc. A Fit-out COC already exists live on SharePoint (`261507_K5M_COC_Fitout.xlsx`, modified 2026-07-17) — it is not merely "being planned."
 
 ## Where this repo came from
 
@@ -27,6 +29,7 @@ An older repo (`ShagunWC/K5M_FFE-_COC-_Management`, branch `building-COC-Version
 - **BOQ (T1B1, current):** FF&E sheet totals $24,724.89 across 24 line items; Fit-out sheet totals $122,069.58 across Hall/Corridor, Entrance, Bathroom, and Bedroom scope groups.
 - **RFI:** ~26 open line items with the team's understanding and questions back to G&B, covering the same Hall/Entrance/Bathroom/Bedroom scope groups as the BOQ.
 - **Known open issue:** the Schematic Design set shows two bedroom furniture options (A/B) sharing identical FF&E codes despite being physically different pieces; Option A (table lamp, not pendant) matches what's actually priced in the confirmed FF&E BOQ.
+- **DD100 (69-page detailed drawing set) drafting/QA issues worth raising with G&B:** missing GEN-120/GEN-130 general sheets; 7 CHAMBRE sheets carry a placeholder "PROJET/VILLE" project name never filled in; 7 CHAMBRE detail sheets (303–309) mis-stamped with the SDB drawing-number prefix instead of CHA, 2 of which also keep a stale "BANQUETTE" label instead of "TV surround"; an extra SDB-201 elevation sheet not in the official drawing index; bedroom ceiling cornice explicitly marked "OPTION B" (unresolved); bathroom vanity pendant-light quantity marked TBC by the lighting designer; recurring "provide electrical supply" callouts across all areas (electrical coordination not finalized); all revision logs are still dummy placeholders.
 
 ## Repo structure (full detail in `README.md`, this branch)
 
