@@ -10,4 +10,11 @@ Initial V1 render was unreadable: Playfair Display/Lato aren't installed on the 
 
 **Known gap found during this pass:** `FA-04` (Anubis fabric, for the banquette/`WC-SE-01`) has no row in either the FFE or Fit-out Material Package — the banquette moved to Fit-out scope but its fabric code never got carried over. Not yet fixed.
 
+### V2 — 2026-07-27, real formatting fix
+The Cambria/Calibri switch above was a misdiagnosis. The user shared a reference file (`261707_K5M_SHD_Client Remark Tracker.xlsx`) that uses Playfair Display/Lato — the exact fonts already in use here — and is exactly the standard being asked for, proving font substitution was never the actual problem. The real cause was row height: per-row computed heights broke as soon as wrapped text didn't match the estimate. Fixed by reverting to Playfair Display (titles/headers) / Lato (body) and applying one uniform, generously tall row height (88pt) to every row regardless of content, matching the reference file exactly.
+
+Also fixed a separate, more serious bug caught only by visually rendering the sheet (Excel COM automation → PDF export, then reading the PDF): 13 of 15 thumbnail images were silently failing to embed and leaking `[image failed to embed: ...]` text into the Remarks column. Root cause — the image paths pointed into the git repo's `001_inbox`-only working tree, which isn't present on disk once a different branch is checked out. Fixed by copying all source images to a stable, branch-independent location (`material_images/Valentine_Pictures`, `material_images/Fabric_Suppliers`) and removing the try/except so any future embedding failure surfaces loudly at build time instead of corrupting a cell.
+
+This file is now visually verified (rendered to PDF and inspected) as clean: all 15 sourced thumbnails load, uniform readable row heights, rotated Status/date headers, Status defaulted to `T` for every row.
+
 Design decisions behind this layout are recorded in `main/DAILY_LOG.md`, 2026-07-27 entries.
