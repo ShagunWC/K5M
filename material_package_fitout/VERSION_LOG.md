@@ -28,4 +28,14 @@ Based on the client's direct review of this sheet:
 - **Status column now colored via conditional formatting** (not just plain text) matching the legend — auto-recolors whenever the Status letter is changed. Required a fix mid-implementation: differential/conditional-format fills read `bgColor`, not `fgColor`, unlike normal cell fills — the color didn't render until both were set.
 - **Incidental fix:** the "Total" row and both caveat notes previously collided on the same spreadsheet row (the notes were merged directly on top of the Total row, silently hiding its label and COUNTA formula). Each now has its own row.
 
+### V3 — 2026-07-27, styling lock-in + banquette Fabrics tab
+This file is being moved to OneDrive after this pass; formatting is now considered locked — future updates should be data-entry only (Status, Remarks, new rows), not structural changes.
+- **Anonymized:** removed all design-team/client real names from cell content — replaced with generic references (e.g. "the design team"). Header text, subtitle, and all remark mentions of specific individuals updated.
+- **Font locked to Lato, size 11, everywhere** — no more Playfair Display or mixed sizes.
+- **Borders switched to solid black** (previously thin tan/rose).
+- **Removed the "Description (FR)" column.**
+- **Dropped `A-ST-03c / A-ST-06c` and `A-WD-03c`** entirely (19 → 17 rows) — both had no confirmed DD-100 localization or task code, and the user confirmed removing them rather than keeping them flagged.
+- **Updated `A-GL-03a`'s Remarks:** "Have made this panel before — a sample should be produced and included in the same box being presented to the client for approval."
+- **Added a new Fabrics tab** — the banquette is Fit-out scope, so its 3 fabrics (`FA-04` upholstery, `FA-05` and `FA-08` decorative cushions) are now tracked here too, each with a real photo. None have a WDCO item code assigned yet.
+
 Design decisions behind this layout are recorded in `main/DAILY_LOG.md`, 2026-07-27 entries.

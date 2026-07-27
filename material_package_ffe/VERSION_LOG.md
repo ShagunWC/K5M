@@ -33,4 +33,14 @@ Based on the client's direct review:
 
 This file is now visually verified (rendered to PDF and inspected) as clean.
 
+### V4 — 2026-07-27, styling lock-in + content review
+This file is being moved to OneDrive after this pass; formatting is now considered locked — future updates should be data-entry only (Status, Remarks, new rows), not structural changes.
+- **Anonymized:** removed all design-team/client real names from cell content — replaced with generic references (e.g. "the design team"). Supplier/brand names (Elitis, Naturtex, Dedar, etc.) are kept, since those are sourcing information, not client/design-team identity.
+- **Font locked to Lato, size 11, everywhere** — titles, headers, body, and notes. No more Playfair Display or mixed sizes.
+- **Borders switched to solid black** (previously thin tan/rose).
+- **Removed the "Description (FR)" column** from both tabs.
+- **Fabrics tab:** removed the Finish/Varnish columns entirely (only `FA-02` ever had finish info — folded into its Remarks instead). Hard Materials tab keeps "Finish/Vernis (FR)" as a hidden column.
+- **Added `PP-03`** to the Fabrics tab — a fabric swatch noted in the design team's shop drawings for `K5M-T1B1-CHA-TL-01`, with no material-list code assigned yet.
+- **`FA-04`** now also has its own row on the Fitout Fabrics tab (new this pass), since its banquette is Fit-out scope — kept here too rather than removed, per direct user confirmation.
+
 Design decisions behind this layout are recorded in `main/DAILY_LOG.md`, 2026-07-27 entries.
