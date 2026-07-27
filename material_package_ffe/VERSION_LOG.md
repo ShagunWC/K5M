@@ -17,4 +17,20 @@ Also fixed a separate, more serious bug caught only by visually rendering the sh
 
 This file is now visually verified (rendered to PDF and inspected) as clean: all 15 sourced thumbnails load, uniform readable row heights, rotated Status/date headers, Status defaulted to `T` for every row.
 
+### V3 — 2026-07-27, restructure per user review
+Based on the client's direct review:
+- **Split into two tabs in one workbook: "Hard Materials" (12 rows) and "Fabrics" (9 rows).** Same workbook, not separate files, per user preference.
+- **Consolidated to one row per material** (was one row per material-per-item-application, 27 rows total). The former "Item Code (WDCO)" column is now **"Applicable Item Code(s) (WDCO)"** — a comma-separated list of every product code that material applies to. Sourcing confirmed directly in the subtitle of each tab: this mapping comes from the FF&E material list PDF (`LISTE DES MATÉRIAUX MOBILIER`) + individual FF&E item shop drawings, cross-referenced in `002_knowledge-bank/materials/T1B1_material_cross_reference.md` — never from DD-100, which is Fit-out only.
+- **Removed Finish Type / Base Colour / Applied Process columns** (only `FFE-ME-02` was a genuine compound case) — that detail now lives in `FFE-ME-02`'s Remarks instead of three mostly-empty dedicated columns.
+- **Finish/Varnish translated:** a new visible "Finish/Varnish (EN)" column is now the primary one; the original French ("Finish/Vernis (FR)") is kept but hidden — unhide if needed for client-facing French communication.
+- **Status column now colored via conditional formatting** matching the legend (same fix as Fitout: differential-format fills need `bgColor` set, not just `fgColor`, or the color silently doesn't render).
+- **Remarks cleaned** — dropped restatements of which furniture piece each row was for (e.g. "Bedside table legs", "Headboard frame"); that's now covered by the Item Code(s) column, so Remarks only carries genuinely new information (sourcing status, substitutions, open decisions).
+- **Category column made sortable** — AutoFilter added to both tabs' header row.
+- **Fabric thumbnails extracted** from Victoire's 21 Jul 2026 global soft-materials list PDF (`LISTING GLOBAL MATERIAUX SOUPLES`) and supplier technical data sheets, matched by fabric code.
+- **`FA-04` gap fixed:** added as a new row in Fabrics (Anubis, col. 203, Les Créations de la Maison) with its real supplier TDS photo. No WDCO item code is assigned yet since its banquette moved to Fit-out scope (tracked under Fitout's `A-WD-02c`) — flagged in Remarks for the team to resolve.
+- **Fixed a High-Res Available inconsistency found during this pass:** `PP-01` (Samuel & Sons trim) was marked "Y" despite never having had an actual image — corrected to "N", since a listing-table PDF crop (now added as its thumbnail) isn't true high-resolution supplier photography, matching the standard applied on the Fitout sheet.
+- Two newly-discovered soft-material codes from the Victoire PDF (`FA-05`, `FA-08` — banquette decorative cushions, and `RU-01` — bedside rug) were **not** added; they weren't previously tracked in either Material Package and adding them wasn't part of this review pass. Flagged here for a future pass.
+
+This file is now visually verified (rendered to PDF and inspected) as clean.
+
 Design decisions behind this layout are recorded in `main/DAILY_LOG.md`, 2026-07-27 entries.
