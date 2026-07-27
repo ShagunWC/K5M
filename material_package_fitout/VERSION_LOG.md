@@ -17,4 +17,15 @@ Thumbnails added: extracted directly from the source `Fitout - 20260721_GB_PHC_C
 
 This file is now visually verified (rendered to PDF and inspected) as clean.
 
+### V2 revision, same day — user review pass
+Based on the client's direct review of this sheet:
+- **Removed paint, wallpaper, and carpet entirely** (`A-PT-01`, `A-PT-02`, `A-WP-01`, `A-WP-02`, `A-CA-01`) — confirmed out of Wood Couture's Fit-out scope. Down from 24 to 19 rows; the removed codes are listed in an EXCLUDED footnote at the bottom of the sheet rather than silently dropped.
+- **Fixed High-Res Available (Y/N):** several rows incorrectly said "Y" — the only images we have for this sheet are low-resolution crops pulled from a PDF, not true high-resolution photography. All rows now correctly say "N".
+- **Localization column fully translated to English** — it previously mixed French location nouns (Entrée, SDB, Chambre, seuil, arche, plinthe, etc., carried over verbatim from the source PDF) with English sentence structure. Now fully English (Entrance/Bathroom/Bedroom/threshold/arch/baseboard/etc.).
+- **Localization column header now explicitly cites its source and date:** "Localization per DD-100, dated 21.07.2026" — this sheet's Localization has only ever come from the DD-100-tagged material list (dated 21.07.2026 per that document's own footer), never from the BOQ or from Victoire's separate global soft-materials list. BOQ mentions inside Localization/Remarks text are conflict flags only, never the source of a location.
+- **Added a disclaimer note:** FM-001–FM-012 (used throughout Localization/Remarks) are internal cross-references I created myself while reconciling the BOQ/DD-100/material-list versions — confirmed (via a full repo search across every branch, RFI logs, emails, and source PDFs) that they do not correspond to any real RFI numbering system. Not fixed/relabeled per user's choice, but now disclosed directly on the sheet.
+- **Samples not needed where scope is unconfirmed:** for `A-ST-03c / A-ST-06c` and `A-WD-03c` (no confirmed Localization or Applicable Task Code yet), Control Sample and High-Res Available changed from "N" to "N/A", with Remarks noting sample sourcing isn't needed until scope is confirmed with Adil.
+- **Status column now colored via conditional formatting** (not just plain text) matching the legend — auto-recolors whenever the Status letter is changed. Required a fix mid-implementation: differential/conditional-format fills read `bgColor`, not `fgColor`, unlike normal cell fills — the color didn't render until both were set.
+- **Incidental fix:** the "Total" row and both caveat notes previously collided on the same spreadsheet row (the notes were merged directly on top of the Total row, silently hiding its label and COUNTA formula). Each now has its own row.
+
 Design decisions behind this layout are recorded in `main/DAILY_LOG.md`, 2026-07-27 entries.
