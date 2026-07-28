@@ -4,6 +4,17 @@ Newest entry at the top. One entry per day, added by whoever (or whichever LLM s
 
 ---
 
+## 2026-07-28
+Rebuilt and realigned the internal AI-usage presentation for the user's boss (10 slides — cover, why this session, the setup, the toolkit, Material Package case study, daily workflow, results so far, open questions, a single "looking ahead" slide, thank you); location TBD in this repo, pending the user's call on where it belongs.
+
+Started the FFE/Fitout **COC** ("Center of Control") build — clarified this is a mature, company-wide WDCO practice (not something new to this project), reviewed a reference COC from another project plus K5M's own (mostly empty) existing SharePoint COC files, and agreed a strict build discipline: nothing gets built without explicit, tab-by-tab direction. Built v1 of the FFE COC (`003_trackers/internal_COC/260728_K5M_Internal COC_FFE.xlsx`) — Data (Master Scope), Hard Material, Fabrics, Shop Drawings, Change Log. A large feedback round came in the same day on Data/Hard Material/Fabrics/SHD, not yet incorporated — see `006_task-management-pm/260728_Task_List.md` for open items.
+
+Added `005_project-discovery/Making_and_Maintaining_a_COC.md` — a genericized, reusable writeup of what was learned building this COC, meant to seed a proper COC-building SOP for future projects.
+
+Introduced a new daily-task-list convention on `006_task-management-pm` (`YYMMDD_Task_List.md`) — the user will say "new task" going forward to add an item to today's list; the eventual goal is a real task-management system for this project built from these logs.
+
+Still open from this morning, carried forward: PDF export of both Material Packages for the supplier folder, customer emails from 27 July, and a POC (point of contact) record — none of these have been actioned yet.
+
 ## 2026-07-24 (end of session)
 Added `002_knowledge-bank/shop_drawings/260601_DD100_T1B1_page_index.md` (full page-to-drawing-code index, date-locked so future DD100 revisions get their own file instead of overwriting this baseline) and `002_knowledge-bank/materials/T1B1_material_cross_reference.md` (material code → every location/page it's used, also baseline-locked with a changelog instead of in-place edits). Copied the actual first-received client package (BOQ, DD100 zip, Schematic Design PDF, FF&E item drawings zip) into `001_inbox/260724_T1B1_first_client_package/` — previously only reviewed from the user's Desktop, never actually preserved in the repo. Added `SESSION_START.md` to `main` with the exact prompt to paste at the start of any future session (this machine or another) to get fully caught up before doing anything else. User's plan: pick back up Monday with a project update; this repo should already be fully "git-ready" for that — nothing further needed before then.
 
