@@ -38,4 +38,9 @@ This file is being moved to OneDrive after this pass; formatting is now consider
 - **Updated `A-GL-03a`'s Remarks:** "Have made this panel before — a sample should be produced and included in the same box being presented to the client for approval."
 - **Added a new Fabrics tab** — the banquette is Fit-out scope, so its 3 fabrics (`FA-04` upholstery, `FA-05` and `FA-08` decorative cushions) are now tracked here too, each with a real photo. None have a WDCO item code assigned yet.
 
+### V4 — 2026-07-28, live edit — added Fabrication Sample tab
+This file is now live on OneDrive and already shared with a supplier by email; this edit was made directly on that live copy (backed up first) and mirrored here.
+
+Added a new **Fabrication Sample** tab tracking physical mockup/fabrication samples to be produced ahead of full production. First entry: `A-ST-01e / A-ST-02c`, tasks `K5M-T1B1-ENT-A/1` and `K5M-T1B1-SDB-B/1` (Entrance + Bathroom general floor). This was **not assumed from the material codes alone** — confirmed directly against the DD-100 floor plans (`ET01-T1B1-ENT-120`, `ET01-T1B1-SDB-120`, dated 01.06.2026), both of which explicitly call out "Calepinage en A-ST-01e & A-ST-02c": the floor is a combined pattern of both stones together, not either one alone, and distinct from the separate anti-slip shower floor (`A-ST-01d`, a different task code).
+
 Design decisions behind this layout are recorded in `main/DAILY_LOG.md`, 2026-07-27 entries.
