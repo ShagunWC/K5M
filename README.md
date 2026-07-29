@@ -4,6 +4,8 @@ This repository is the single source of truth for the K5M project. It is structu
 
 **Read `SECURITY_PROTOCOL.md` in this branch before creating or editing any document in any branch.**
 
+**Read `COMMAND_CENTER.md` in this branch for the trigger phrases Shagun uses in conversation (`new task`, `#projectdevelopment`, `#totalcheck`) and exactly what each one does.**
+
 ## How this repo is organized
 
 This repo uses branches, not folders, as the top-level division of content. Each branch is a self-contained area for one category of work. This `main` branch holds no project content itself — it is the front door: orientation, rules, and the daily log.
