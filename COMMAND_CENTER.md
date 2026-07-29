@@ -29,10 +29,12 @@ Trigger phrases Shagun uses in conversation to fire a standing action. Read this
 
 **Does, in order:**
 1. Confirms every tracker (COC files, Material Packages, Project Calendar) reflects the latest agreed state — nothing discussed but not yet applied.
-2. Confirms all of today's file changes are actually pushed to the correct branch in git — nothing sitting locally only.
-3. Confirms today's task list (`006_task-management-pm`) is up to date with everything raised today.
-4. Confirms `DAILY_LOG.md` has today's entry.
-5. Reports back: what's clean, what's still open/pending, anything inconsistent found.
+2. Asks Shagun for any `#projectdevelopment` updates from today that haven't been logged yet — don't assume everything worth logging was already flagged live during the day.
+3. Tags every one of today's `new task` and Development Log entries with its Umbrella Task (see `Umbrella_Tasks.md`, same branch) — tagging happens in this end-of-day batch, not live at the moment each entry is created.
+4. Confirms all of today's file changes are actually pushed to the correct branch in git — nothing sitting locally only.
+5. Confirms today's task list (`006_task-management-pm`) is up to date with everything raised today.
+6. Confirms `DAILY_LOG.md` has today's entry.
+7. Reports back: what's clean, what's still open/pending, anything inconsistent found.
 
 ---
 
@@ -40,4 +42,4 @@ Trigger phrases Shagun uses in conversation to fire a standing action. Read this
 
 Add new commands below with a date, rather than editing the list above, unless a command's behavior is being corrected.
 
-*No amendments yet.*
+**2026-07-29:** `#totalcheck` extended to include asking for unlogged project developments and end-of-day Umbrella Task tagging, once the Umbrella Tasks concept was introduced (see `Umbrella_Tasks.md`, once created).
