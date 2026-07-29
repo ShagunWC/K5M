@@ -7,3 +7,5 @@
 5. Close the BOQ gap problem — may need to update the Fit-out scope accordingly.
 6. Fix a meeting with H&T for briefing on the Material Package.
 7. Make a "3D material model agent" for the project — to show the client and align all stakeholders on material application on FFE products specifically.
+8. Form a central RFI Management system.
+9. Get the MoM from Claire's meeting (she'll share tomorrow).
