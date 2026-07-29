@@ -14,6 +14,10 @@ This protocol applies to every document created in every branch of this reposito
 
 These rules protect commercially sensitive relationships (client and supplier identity) from appearing in working documents that may be shared, duplicated, or referenced outside their intended audience. Project code and role labels ("Production Partner") carry the same operational meaning without exposing the identity.
 
+## Who this protects
+
+See `CONTACT_SHEET.md` (same branch) for the real names, roles, and required generic reference terms this protocol is protecting — e.g. "the design team," "the architect," "the owner's rep," "the client." Internal only; never copy real names from that sheet into a client- or supplier-facing document.
+
 ## Scope of enforcement
 
 Before creating or editing anything in `002_knowledge-bank`, `003_trackers`, `004_communication`, `005_project-discovery`, or `006_task-management-pm`, this document should be treated as already read. If you are an LLM picking up work in one of those branches without having seen `main`, check `main` for this file first.
