@@ -4,6 +4,17 @@ Newest entry at the top. One entry per day, added by whoever (or whichever LLM s
 
 ---
 
+## 2026-07-29
+Backfilled the missing 2026-07-27 log entry (Material Package V1-V4 work had never been recorded here). Diagnosed two open COC questions from yesterday: confirmed openpyxl (and Excel's own COM/VBA object model) cannot write native checkboxes, so Shagun will insert them manually in Excel over the existing TRUE/FALSE cells; confirmed the Status auto-color conditional formatting rule is intact and renders correctly when tested directly — the issue Shagun saw was environment-specific, not a file bug. FFE COC itself was **not** rebuilt with the rest of yesterday's feedback (Master Scope column order, images, font size 9, collapsible remarks design) — still open, see `260729_Task_List.md`.
+
+Built `CONTACT_SHEET.md` (main branch) — real names/roles for every external party (client contact, owner's rep, G&B design team, architect, lighting consultant) and WDCO's own team, each with the generic term to use instead in client/supplier-facing documents. Linked from `SECURITY_PROTOCOL.md`. Confirmed via full-repo search that no existing document had mislabeled the architect's input as "the design team."
+
+Built the **Project Calendar** (`006_task-management-pm/260729_K5M_Project Calendar.xlsx`) from the client-facing and supplier-facing schedules — v1 (Data table, Jul-Dec 2026 month grids, Deadlines Summary, Development Log), then a substantial v2 rebuild after a full feedback round: recurring-task support (two rules — biweekly/weekly Friday updates, anchored 31 Jul 2026), 6-event-slot rows per day (was single wrapped-text cells), multi-day events now render as a merged tinted bar across their full date range (previously only shown on the start day), legend on every sheet, category color-coding without redundant bracket text, "Hard Milestones" tab rebuilt as a mini 6-month calendar grid with deadline days highlighted directly, and Development Log extended with Category/Umbrella Task/Evidence-hyperlink columns. Caught and fixed a row-height bug mid-build (fixed heights too short for wrapped text, causing visual overlap) via the same render-to-PDF-and-inspect discipline used elsewhere.
+
+Introduced **Umbrella Tasks** — 12 ongoing project workstreams (Project Scope, Project Schedule, Compliance Collection, FFE SHD, Material Package FFE/Fitout, Specifications from client, RFI, Fitout SHD, COC Management, Communication Management, Site Survey Planning) — documented in `006_task-management-pm/Umbrella_Tasks.md`. `new task` and Development Log entries will be tagged with one of these, in a batch during end-of-day `#totalcheck`, not live. A weekly report per umbrella task is planned (fresh dated file each week), not yet built.
+
+Created `COMMAND_CENTER.md` (main branch) documenting the three standing trigger phrases — `new task`, `#projectdevelopment`, `#totalcheck` — and exactly what each does; linked from the README. Extended `#totalcheck` same day to include asking for unlogged project developments and end-of-day Umbrella Task tagging.
+
 ## 2026-07-28
 Rebuilt and realigned the internal AI-usage presentation for the user's boss (10 slides — cover, why this session, the setup, the toolkit, Material Package case study, daily workflow, results so far, open questions, a single "looking ahead" slide, thank you); location TBD in this repo, pending the user's call on where it belongs.
 
