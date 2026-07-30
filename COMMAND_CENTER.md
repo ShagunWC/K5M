@@ -8,7 +8,9 @@ Trigger phrases Shagun uses in conversation to fire a standing action. Read this
 
 **Says:** "#newtask: <description>"
 
-**Does:** Appends a new numbered entry to today's dated task list on `006_task-management-pm` (`YYMMDD_Task_List.md` — created fresh if today doesn't have one yet). One line per task, no elaboration into prose. Commit and push immediately.
+**Does:** Adds a new row to the K5M Task Tracker (`006_task-management-pm/260730_K5M_Task Tracker.xlsx`, or its OneDrive location once handed off) — Date Raised, the task description in full, and best-guess Umbrella Task (written in full — no abbreviations; "UTSK" is only ever shorthand for the term "Umbrella Task" itself, not for any value)/Priority/Type of Task/Owner/Status, flagged for Shagun to correct. Commit and push immediately.
+
+Superseded the one-file-per-day `YYMMDD_Task_List.md` markdown convention on 2026-07-30 — the Task Tracker is now the single running record.
 
 ---
 
@@ -28,11 +30,11 @@ Trigger phrases Shagun uses in conversation to fire a standing action. Read this
 **Says:** "#totalcheck" (or "do a total check") — only ever run when Shagun explicitly asks, never automatically at end of day without being asked.
 
 **Does, in order:**
-1. Confirms every tracker (COC files, Material Packages, Project Calendar) reflects the latest agreed state — nothing discussed but not yet applied.
+1. Confirms every tracker (COC files, Material Packages, Project Calendar, Task Tracker) reflects the latest agreed state — nothing discussed but not yet applied.
 2. Asks Shagun for any `#projectdevelopment` updates from today that haven't been logged yet — don't assume everything worth logging was already flagged live during the day.
-3. Tags every one of today's `#newtask` and Development Log entries with its Umbrella Task code (see `Umbrella_Tasks.md`, same branch) — tagging happens in this end-of-day batch, not live at the moment each entry is created.
-4. Confirms all of today's file changes are actually pushed to the correct branch in git — nothing sitting locally only.
-5. Confirms today's task list (`006_task-management-pm`) is up to date with everything raised today.
+3. Tags every one of today's `#newtask` entries and Development Log entries with its Umbrella Task, written in full (see `Umbrella_Tasks.md`, same branch — no abbreviations for the values themselves; "UTSK" is only ever shorthand for the term "Umbrella Task") — tagging happens in this end-of-day batch, not live at the moment each entry is created.
+4. Confirms the Task Tracker (`260730_K5M_Task Tracker.xlsx` or wherever it currently lives — OneDrive once Shagun hands it off) reflects every task raised today, with Status/Owner/Priority updated for anything that changed during the day.
+5. Confirms all of today's file changes are actually pushed to the correct branch in git — nothing sitting locally only.
 6. Confirms `DAILY_LOG.md` has today's entry.
 7. Reports back: what's clean, what's still open/pending, anything inconsistent found.
 
