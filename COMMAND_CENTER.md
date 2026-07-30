@@ -38,6 +38,16 @@ Trigger phrases Shagun uses in conversation to fire a standing action. Read this
 
 ---
 
+## `#GoodMorning` / `#ShowMeMyKanban`
+
+**Says:** either phrase — they're interchangeable, same trigger.
+
+**Does:** reads the task-management Excel sheet (`006_task-management-pm`) and generates an up-to-date Kanban view grouped by Status, shown directly in the conversation. This is generated fresh on request, not a live-updating board — ask again any time for a current view.
+
+**Note on automation:** there is no reliable way to have this fire automatically every morning without Shagun asking — the available scheduling tool is session-only (nothing persists to disk, gone when the session ends, capped at 7 days even if kept open) and she starts a fresh session each day. So this trigger firing the moment she opens a session and says "Good morning" *is* the practical version of "automatic."
+
+---
+
 ## Amendments
 
 Add new commands below with a date, rather than editing the list above, unless a command's behavior is being corrected.
@@ -45,3 +55,5 @@ Add new commands below with a date, rather than editing the list above, unless a
 **2026-07-29:** `#totalcheck` extended to include asking for unlogged project developments and end-of-day Umbrella Task tagging, once the Umbrella Tasks concept was introduced (see `Umbrella_Tasks.md`).
 
 **2026-07-29:** standardized the task-log trigger as `#newtask` (previously used inconsistently as "new task" / "#newtask" / "#new task" — this is now the one form).
+
+**2026-07-30:** added `#GoodMorning` / `#ShowMeMyKanban` once the task-management Excel sheet and Kanban-by-Status concept were agreed.
