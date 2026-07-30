@@ -8,7 +8,7 @@ Trigger phrases Shagun uses in conversation to fire a standing action. Read this
 
 **Says:** "#newtask: <description>"
 
-**Does:** Adds a new row to the K5M Task Tracker (`006_task-management-pm/260730_K5M_Task Tracker.xlsx`, or its OneDrive location once handed off) — Date Raised, the task description in full, and best-guess Umbrella Task (written in full — no abbreviations; "UTSK" is only ever shorthand for the term "Umbrella Task" itself, not for any value)/Priority/Type of Task/Owner/Status, flagged for Shagun to correct. Commit and push immediately.
+**Does:** Adds a new row to the K5M Task Tracker (`006_task-management-pm/260730_K5M_Task Tracker.xlsx`, or its OneDrive location once handed off) — Date Raised, the task description in full, and best-guess Umbrella Task (written in full — no abbreviations; "UTSK" is only ever shorthand for the term "Umbrella Task" itself, not for any value)/Priority/Type of Task/Dependent On 1/Dependent On 2/Status, flagged for Shagun to correct. There is no "Owner" column — Shagun is always the default owner, so it isn't tracked per row. Commit and push immediately.
 
 Superseded the one-file-per-day `YYMMDD_Task_List.md` markdown convention on 2026-07-30 — the Task Tracker is now the single running record.
 
@@ -33,20 +33,33 @@ Superseded the one-file-per-day `YYMMDD_Task_List.md` markdown convention on 202
 1. Confirms every tracker (COC files, Material Packages, Project Calendar, Task Tracker) reflects the latest agreed state — nothing discussed but not yet applied.
 2. Asks Shagun for any `#projectdevelopment` updates from today that haven't been logged yet — don't assume everything worth logging was already flagged live during the day.
 3. Tags every one of today's `#newtask` entries and Development Log entries with its Umbrella Task, written in full (see `Umbrella_Tasks.md`, same branch — no abbreviations for the values themselves; "UTSK" is only ever shorthand for the term "Umbrella Task") — tagging happens in this end-of-day batch, not live at the moment each entry is created.
-4. Confirms the Task Tracker (`260730_K5M_Task Tracker.xlsx` or wherever it currently lives — OneDrive once Shagun hands it off) reflects every task raised today, with Status/Owner/Priority updated for anything that changed during the day.
-5. Confirms all of today's file changes are actually pushed to the correct branch in git — nothing sitting locally only.
-6. Confirms `DAILY_LOG.md` has today's entry.
-7. Reports back: what's clean, what's still open/pending, anything inconsistent found.
+4. **This is where Woody does the actual tracker upkeep** (see "Woody" below): review every open row, mark anything no longer relevant/actionable as **Stale** in the Status column, and hide that row (never delete it). The Task Tracker must be clean and current by the end of this step — that's what makes tomorrow's `#GoodMorning` view trustworthy.
+5. Confirms the Task Tracker (wherever it currently lives — OneDrive once Shagun hands it off) reflects every task raised today, with Status/Dependent On/Priority updated for anything that changed during the day.
+6. Confirms all of today's file changes are actually pushed to the correct branch in git — nothing sitting locally only.
+7. Confirms `DAILY_LOG.md` has today's entry.
+8. Reports back: what's clean, what's still open/pending, anything inconsistent found.
 
 ---
 
-## `#GoodMorning` / `#ShowMeMyKanban`
+## `#GoodMorning`
 
-**Says:** either phrase — they're interchangeable, same trigger.
+**Says:** "#GoodMorning"
 
-**Does:** reads the task-management Excel sheet (`006_task-management-pm`) and generates an up-to-date Kanban view grouped by Status, shown directly in the conversation. This is generated fresh on request, not a live-updating board — ask again any time for a current view.
+**Does:** opens the actual K5M Task Tracker file directly (from its OneDrive location once handed off) so Shagun can view the full, current tracker herself. She builds her own day's schedule from it — this does **not** generate a filtered "my day" list or a summary; it just opens the live file. It should already be clean and up to date, because the previous evening's `#totalcheck` did that work.
 
-**Note on automation:** there is no reliable way to have this fire automatically every morning without Shagun asking — the available scheduling tool is session-only (nothing persists to disk, gone when the session ends, capped at 7 days even if kept open) and she starts a fresh session each day. So this trigger firing the moment she opens a session and says "Good morning" *is* the practical version of "automatic."
+---
+
+## `#ShowMeMyKanban`
+
+**Says:** "#ShowMeMyKanban" — a separate, on-demand command, not part of the morning routine.
+
+**Does:** reads the Task Tracker and generates a Kanban view grouped by Status, shown directly in the conversation. Only given when specifically asked for — not automatically every morning.
+
+---
+
+## Woody
+
+**Woody** is the name for Claude's maintenance role on the Task Tracker — whenever "Woody" is used (by Shagun, or in any note/log), it means Claude acting in this capacity: reviewing tasks, marking things Stale, keeping the tracker clean. It is not a separate tool or system, just a name for this specific job so it's easy to refer to in conversation (e.g. "let Woody handle that" = Claude will mark/clean it during `#totalcheck`, not something Shagun needs to do herself).
 
 ---
 
@@ -59,3 +72,5 @@ Add new commands below with a date, rather than editing the list above, unless a
 **2026-07-29:** standardized the task-log trigger as `#newtask` (previously used inconsistently as "new task" / "#newtask" / "#new task" — this is now the one form).
 
 **2026-07-30:** added `#GoodMorning` / `#ShowMeMyKanban` once the task-management Excel sheet and Kanban-by-Status concept were agreed.
+
+**2026-07-30:** corrected — `#GoodMorning` and `#ShowMeMyKanban` are separate commands, not interchangeable. `#GoodMorning` just opens the live tracker file; `#ShowMeMyKanban` is the on-demand Kanban view. Also removed the "Owner" column (Shagun is always the default owner), added "Woody" as the name for Claude's tracker-maintenance role, and gave `#totalcheck` an explicit Stale-marking/row-hiding step so the tracker is clean by the next morning.
