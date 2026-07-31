@@ -34,6 +34,11 @@ Every rule below is a standing constraint, not a one-off preference — apply it
 13. **Never start building a deliverable directly.** First confirm everything is aligned — context, materials, understanding of what's wanted — by asking questions if anything is unclear. Only begin the actual build once **`#execute`** is explicitly given.
    → `COMMAND_CENTER.md` for `#execute`.
 
+14. **FFE project scope: `260724_WDCOK5M_FFE_Master SKU List.xlsx`** (OneDrive, `00_SHARED/Project Scope`) **is the canonical source.** Whenever a tracker needs FFE scope/WDCO item codes, pull from this file — not from the COC, Material Package, or any other copy. WDCO codes use `CHA` (not `CH`) for the Chamber area token; "Temporary WCI Code" is retired, WDCO Code is now the only code that matters.
+   **Fitout scope base file is not yet decided** — expected to be confirmed the week of 2026-08-03; add its own entry here once confirmed, don't assume it's the same file or convention as FFE.
+
+15. **Any COM automation script touching Excel/PowerPoint/Word must use `win32com.client.DispatchEx`, never bare `Dispatch`.** `Dispatch` attaches to an already-running instance if one exists (e.g. Shagun's own open window) — the script's own cleanup `Quit()` then closes her whole session, same failure mode as force-killing the process, just via a "graceful" call instead of `-Force`. `DispatchEx` always starts an independent process, so `Quit()` only ever closes what the script itself opened.
+
 ---
 
 ## Amendments
@@ -41,3 +46,5 @@ Every rule below is a standing constraint, not a one-off preference — apply it
 Add new rules below with a date, rather than editing the numbered list above unless a rule is being corrected.
 
 **2026-07-31:** introduced **`#hardrule`** as the trigger phrase for adding a new entry to this file — "#hardrule: <text>" appends it to the numbered list above with today's date noted here. This is the same mechanism as `#newtask` for the Task Tracker, but for this guardrail list. Rule 13 (the `#execute` gate) was added via this mechanism.
+
+**2026-07-31:** added rule 14 (FFE canonical scope file, per Task Tracker row 28) and rule 15 (`DispatchEx` requirement, after `Dispatch` closed Shagun's own open Excel session a second time via a different mechanism than the original force-kill incident).
