@@ -12,6 +12,7 @@ Own names are fine in our own outward correspondence (we sign our own emails); t
 | Claire Padilla | Director of Operations — Shagun's direct reporting manager | claire@woodcouture.com |
 | PDC | Founder / Owner | — |
 | Rahul Venugopal | Director of Procurement | rahul@woodcouture.com |
+| Cathy Yang | Role not yet confirmed — appears on H&T material package correspondence | cathy@woodcouture.com |
 
 ## External parties — real name must never appear in client/supplier-facing documents
 
