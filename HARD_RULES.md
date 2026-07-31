@@ -31,10 +31,13 @@ Every rule below is a standing constraint, not a one-off preference — apply it
 
 12. **Visually verify every Excel/PowerPoint output before calling it done.** Render to PDF via COM (`excel_to_pdf.py` / `pptx_to_pdf.py`) and read it back — don't rely on code review of the generation script alone.
 
+13. **Never start building a deliverable directly.** First confirm everything is aligned — context, materials, understanding of what's wanted — by asking questions if anything is unclear. Only begin the actual build once **`#execute`** is explicitly given.
+   → `COMMAND_CENTER.md` for `#execute`.
+
 ---
 
 ## Amendments
 
 Add new rules below with a date, rather than editing the numbered list above unless a rule is being corrected.
 
-*No amendments yet.*
+**2026-07-31:** introduced **`#hardrule`** as the trigger phrase for adding a new entry to this file — "#hardrule: <text>" appends it to the numbered list above with today's date noted here. This is the same mechanism as `#newtask` for the Task Tracker, but for this guardrail list. Rule 13 (the `#execute` gate) was added via this mechanism.

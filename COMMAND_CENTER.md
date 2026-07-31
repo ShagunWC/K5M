@@ -63,6 +63,22 @@ Superseded the one-file-per-day `YYMMDD_Task_List.md` markdown convention on 202
 
 ---
 
+## `#hardrule`
+
+**Says:** "#hardrule: <text>"
+
+**Does:** Appends a new numbered entry to `HARD_RULES.md` (main branch) with the given rule, and logs the date under that file's Amendments section. Same mechanism as `#newtask`, but for the standing guardrail list instead of the Task Tracker.
+
+---
+
+## `#execute`
+
+**Says:** "#execute"
+
+**Does:** Gives the explicit go-ahead to start building a deliverable. Per Hard Rule 13: never start building directly — gather full context, confirm understanding, and ask any clarifying questions first; only begin the actual build once `#execute` is given. If Shagun hasn't said it yet, keep clarifying/aligning rather than building.
+
+---
+
 ## Amendments
 
 Add new commands below with a date, rather than editing the list above, unless a command's behavior is being corrected.
@@ -74,3 +90,5 @@ Add new commands below with a date, rather than editing the list above, unless a
 **2026-07-30:** added `#GoodMorning` / `#ShowMeMyKanban` once the task-management Excel sheet and Kanban-by-Status concept were agreed.
 
 **2026-07-30:** corrected — `#GoodMorning` and `#ShowMeMyKanban` are separate commands, not interchangeable. `#GoodMorning` just opens the live tracker file; `#ShowMeMyKanban` is the on-demand Kanban view. Also removed the "Owner" column (Shagun is always the default owner), added "Woody" as the name for Claude's tracker-maintenance role, and gave `#totalcheck` an explicit Stale-marking/row-hiding step so the tracker is clean by the next morning.
+
+**2026-07-31:** added `#hardrule` (adds an entry to `HARD_RULES.md`) and `#execute` (the explicit go-ahead to start building — nothing gets built directly before it, per Hard Rule 13).
