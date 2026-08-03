@@ -39,6 +39,8 @@ Every rule below is a standing constraint, not a one-off preference — apply it
 
 15. **Any COM automation script touching Excel/PowerPoint/Word must use `win32com.client.DispatchEx`, never bare `Dispatch`.** `Dispatch` attaches to an already-running instance if one exists (e.g. Shagun's own open window) — the script's own cleanup `Quit()` then closes her whole session, same failure mode as force-killing the process, just via a "graceful" call instead of `-Force`. `DispatchEx` always starts an independent process, so `Quit()` only ever closes what the script itself opened.
 
+16. **The COC is the main/master material tracker.** Shagun works on it directly with Claude. The client-facing and supplier-facing Material Package trackers are downstream copies — updated *from* the COC, not the other way around. What exactly flows into each downstream file is decided case by case, not automatically mirrored.
+
 ---
 
 ## Amendments
@@ -48,3 +50,5 @@ Add new rules below with a date, rather than editing the numbered list above unl
 **2026-07-31:** introduced **`#hardrule`** as the trigger phrase for adding a new entry to this file — "#hardrule: <text>" appends it to the numbered list above with today's date noted here. This is the same mechanism as `#newtask` for the Task Tracker, but for this guardrail list. Rule 13 (the `#execute` gate) was added via this mechanism.
 
 **2026-07-31:** added rule 14 (FFE canonical scope file, per Task Tracker row 28) and rule 15 (`DispatchEx` requirement, after `Dispatch` closed Shagun's own open Excel session a second time via a different mechanism than the original force-kill incident).
+
+**2026-08-03:** added rule 16 (COC as main/master tracker, client/supplier-facing files downstream) — this reverses the direction data had been flowing until now (COC was pulling from the supplier-facing Material Package).
