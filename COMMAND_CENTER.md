@@ -79,6 +79,14 @@ Superseded the one-file-per-day `YYMMDD_Task_List.md` markdown convention on 202
 
 ---
 
+## `#refreshmenow`
+
+**Says:** "#refreshmenow: <umbrella task or topic>"
+
+**Does:** Gives Shagun a full briefing of everything currently known/built on that umbrella topic — pulled from across the repo, memory, and any live files, not just one tracker. Covers: what exists, what's been built, current status, open items, and anything unresolved. This is a knowledge-recall/briefing command, not a build or edit — it never modifies anything, just reports.
+
+---
+
 ## Amendments
 
 Add new commands below with a date, rather than editing the list above, unless a command's behavior is being corrected.
@@ -92,3 +100,5 @@ Add new commands below with a date, rather than editing the list above, unless a
 **2026-07-30:** corrected — `#GoodMorning` and `#ShowMeMyKanban` are separate commands, not interchangeable. `#GoodMorning` just opens the live tracker file; `#ShowMeMyKanban` is the on-demand Kanban view. Also removed the "Owner" column (Shagun is always the default owner), added "Woody" as the name for Claude's tracker-maintenance role, and gave `#totalcheck` an explicit Stale-marking/row-hiding step so the tracker is clean by the next morning.
 
 **2026-07-31:** added `#hardrule` (adds an entry to `HARD_RULES.md`) and `#execute` (the explicit go-ahead to start building — nothing gets built directly before it, per Hard Rule 13).
+
+**2026-08-04:** added `#refreshmenow` — an on-demand full briefing on any umbrella topic, read-only, no edits.
