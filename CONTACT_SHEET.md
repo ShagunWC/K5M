@@ -13,6 +13,8 @@ Own names are fine in our own outward correspondence (we sign our own emails); t
 | PDC | Founder / Owner | — |
 | Rahul Venugopal | Director of Procurement | rahul@woodcouture.com |
 | Cathy Yang | Role not yet confirmed — appears on H&T material package correspondence | cathy@woodcouture.com |
+| Resti | Head of Engineering (joined 2026-08-04) — technical point of reference for shop drawings/engineering support across all projects; works with Tharusha (draftsman); joins client meetings when technical input needed, alongside the responsible PM | Email not yet provided |
+| Tharusha | Draftsman — works directly with Resti on shop drawing execution/assignment | Email not yet provided |
 
 ## External parties — real name must never appear in client/supplier-facing documents
 
