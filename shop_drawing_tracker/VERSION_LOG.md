@@ -4,6 +4,18 @@ Newest entry at the top.
 
 ---
 
+## 2026-08-04 — `260804_K5M_Shop Drawing Tracker.xlsx` — V3
+Answered the three open questions from V2 and applied them:
+
+- **Ref No. meaning confirmed**: a running reference tag per remark row, not an external ID.
+- **Grouping fix**: the first "Ref No." column in SHD00 (before Client Feedback) wasn't collapsing with its section while the other two were — confirmed unintentional, now all three collapse consistently with their stage.
+- **SHD00's structure mirrored onto SHD01**: SHD01 now has the same "Created On" + per-stage "Ref No." layout as SHD00 (previously SHD01 only had the original single-hyperlink-plus-remarks layout). New SHD01 block: SHD01 Created On → SHD01 Link → Ref No./Client Feedback/Value → Ref No./Internal Review/Value → Ref No./Factory-Production Partner Review/Value. GFP checklist block shifted right accordingly (now starts where SHD01 ends).
+- Column insertions done via Excel COM as before, using header-text lookups rather than hardcoded column letters (more robust against future structural drift) — with the same validation-bleed bug recurring (Value dropdown auto-expanding into the newly-inserted adjacent Ref No. column) and fixed the same way, trimmed back to single-column ranges: H, K, N (SHD00) and S, V, Y (SHD01).
+
+Validated before delivery: zip-integrity check, image/anchor check (24 images still correctly anchored to column B), formula spot-check, clean Excel COM open, and a rendered PDF visual check.
+
+---
+
 ## 2026-08-04 — `260804_K5M_Shop Drawing Tracker.xlsx` — V2
 User-driven edits made directly in Excel after V1, then reconciled/extended:
 
