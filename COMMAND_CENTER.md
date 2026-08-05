@@ -37,7 +37,8 @@ Superseded the one-file-per-day `YYMMDD_Task_List.md` markdown convention on 202
 5. Confirms the Task Tracker (wherever it currently lives — OneDrive once Shagun hands it off) reflects every task raised today, with Status/Dependent On/Priority updated for anything that changed during the day.
 6. Confirms all of today's file changes are actually pushed to the correct branch in git — nothing sitting locally only.
 7. Confirms `DAILY_LOG.md` has today's entry.
-8. Reports back: what's clean, what's still open/pending, anything inconsistent found.
+8. Updates `PROJECT_BRIEFING.md`'s "Where we left off" section (main branch) so it reflects today's actual state — not just `DAILY_LOG.md`. This is what a brand-new session (or `SESSION_START.md`) reads to get caught up; it must never be allowed to go stale again the way it did before 2026-08-04.
+9. Reports back: what's clean, what's still open/pending, anything inconsistent found.
 
 ---
 
@@ -102,3 +103,5 @@ Add new commands below with a date, rather than editing the list above, unless a
 **2026-07-31:** added `#hardrule` (adds an entry to `HARD_RULES.md`) and `#execute` (the explicit go-ahead to start building — nothing gets built directly before it, per Hard Rule 13).
 
 **2026-08-04:** added `#refreshmenow` — an on-demand full briefing on any umbrella topic, read-only, no edits.
+
+**2026-08-04:** added a `#totalcheck` step to update `PROJECT_BRIEFING.md`'s "Where we left off" section daily — it had gone stale (still describing 2026-07-24's initial onboarding) because it was only ever updated on an ad-hoc basis. `#totalcheck` is the natural daily checkpoint to keep it current.

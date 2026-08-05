@@ -41,6 +41,17 @@ Git is managed directly by Claude (cloned, authenticated via `gh`) — no manual
 
 ## Where we left off
 
+**This section is stale below the "as of 2026-08-04" line — kept for history, but read the top first.**
+
+**As of 2026-08-04 (end of day):** the initial-onboarding phase (BOQ walkthrough, narrative briefing) described in the paragraph below this is long done. Read `DAILY_LOG.md` (newest entry first) for the actual day-by-day record — it is far more current and detailed than this section. In brief, the project now runs on:
+- `COMMAND_CENTER.md` (this branch) — standing trigger phrases (`#newtask`, `#projectdevelopment`, `#totalcheck`, `#GoodMorning`, `#ShowMeMyKanban`, `#hardrule`, `#execute`, `#refreshmenow`). **Read this before doing anything** — it governs how work actually gets done here.
+- `HARD_RULES.md` (this branch) — 19 standing constraints, several from real incidents (Excel COM force-closing Shagun's own window, a COC corruption incident, recurring Excel column-insert gotchas). **Read this too, before touching any file.**
+- `Umbrella_Tasks.md` (`006_task-management-pm`) — the 13-category shared vocabulary tagging every task/log entry.
+- Live trackers: `260730_K5M_Task Tracker.xlsx` and `260729_K5M_Project Calendar.xlsx` (`006_task-management-pm`), `internal_COC/260728_K5M_Internal COC_FFE.xlsx` and `shop_drawing_tracker/260804_K5M_Shop Drawing Tracker.xlsx` (`003_trackers`).
+- **Currently open, carried into the next session:** a full COC rebuild-from-scratch is agreed in principle (data was fine, but the file itself is suspected of being too fragile/bloated — see Hard Rule 17-19) but deliberately deferred until the Calendar/Task Tracker work is finished; a merged `Project Management_Tasks and Calendar.xlsx` workbook is scoped and agreed but not yet built; `#projectdevelopment` logging has a 2-day gap (3-4 Aug) that Shagun explicitly wants to close out together next session, not rushed; the Fitout scope base file is still undecided.
+
+The paragraph and open items below reflect where things stood on 2026-07-24, at the very start of this repo — kept for historical continuity, not current status:
+
 User is about to share the BOQ (Bill of Quantities), then walk through the rest of the project narratively. Stated goal: full onboarding first — no building — Claude asks clarifying questions only after everything has been shared.
 
 ## Open items / not yet decided
