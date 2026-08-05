@@ -41,6 +41,12 @@ Every rule below is a standing constraint, not a one-off preference — apply it
 
 16. **The COC is the main/master material tracker.** Shagun works on it directly with Claude. The client-facing and supplier-facing Material Package trackers are downstream copies — updated *from* the COC, not the other way around. What exactly flows into each downstream file is decided case by case, not automatically mirrored.
 
+17. **Any Excel file that gets a structural edit (column/row insert or delete, image added, outline/grouping applied) must be validated before it's delivered — on a scratch copy first, never on the live Desktop/git file directly.** Validation = a zip-integrity check (`zipfile.testzip()`), an image/anchor-count check if images are involved, and a clean Excel COM open (no repair prompt) — not just a visual PDF render. Only copy over the live file once the scratch copy passes all of these.
+
+18. **Excel COM's `Columns.Insert()` / `Rows.Insert()` auto-expands adjacent data validation ranges into the newly inserted column, and can corrupt a merged range if the insertion point falls inside it.** Always: (a) re-check and re-scope data validation ranges after any column/row insert near one, and (b) unmerge any merged range the insertion point falls inside *before* inserting, then re-merge over the correct new span afterward — never insert into a live merge and hope it shifts correctly.
+
+19. **When copying an image into a new location in a workbook (not just preserving an existing one), compress/resize it — don't reuse the full-resolution original.** Duplicating full-resolution images doubles a file's embedded-image weight for no display benefit; this is the same root cause already flagged as a risk on the 36MB COC.
+
 ---
 
 ## Amendments
@@ -52,3 +58,5 @@ Add new rules below with a date, rather than editing the numbered list above unl
 **2026-07-31:** added rule 14 (FFE canonical scope file, per Task Tracker row 28) and rule 15 (`DispatchEx` requirement, after `Dispatch` closed Shagun's own open Excel session a second time via a different mechanism than the original force-kill incident).
 
 **2026-08-03:** added rule 16 (COC as main/master tracker, client/supplier-facing files downstream) — this reverses the direction data had been flowing until now (COC was pulling from the supplier-facing Material Package).
+
+**2026-08-04:** added rules 17-19 while building the Shop Drawing Tracker: scratch-copy-first validation for any structurally-edited Excel file (zip test + image check + clean COM open, not just a PDF render), the Excel COM column-insert gotcha (validation ranges auto-expand into new adjacent columns, merges can be corrupted if the insert point falls inside them), and compressing images before duplicating them into a new location rather than reusing full-resolution originals.
