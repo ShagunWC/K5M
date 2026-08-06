@@ -88,6 +88,14 @@ Superseded the one-file-per-day `YYMMDD_Task_List.md` markdown convention on 202
 
 ---
 
+## `#STOP`
+
+**Says:** "#STOP"
+
+**Does:** Stops whatever Claude is doing or about to do, immediately — no further tool calls, no continuing the current plan — and gives full attention to whatever Shagun says next. Nothing resumes from before the `#STOP` until she explicitly says to continue it.
+
+---
+
 ## Amendments
 
 Add new commands below with a date, rather than editing the list above, unless a command's behavior is being corrected.
@@ -105,3 +113,5 @@ Add new commands below with a date, rather than editing the list above, unless a
 **2026-08-04:** added `#refreshmenow` — an on-demand full briefing on any umbrella topic, read-only, no edits.
 
 **2026-08-04:** added a `#totalcheck` step to update `PROJECT_BRIEFING.md`'s "Where we left off" section daily — it had gone stale (still describing 2026-07-24's initial onboarding) because it was only ever updated on an ad-hoc basis. `#totalcheck` is the natural daily checkpoint to keep it current.
+
+**2026-08-06:** added `#STOP` — an immediate hard interrupt, distinct from a plain "wait." Stops all in-progress action and gives full attention to what Shagun says next.
