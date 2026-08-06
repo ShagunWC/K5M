@@ -4,6 +4,21 @@ Newest entry at the top. One entry per day, added by whoever (or whichever LLM s
 
 ---
 
+## 2026-08-06
+Iterated the stone arch BOQ reconciliation table (built 4 Aug) through several real rounds with Resti's direct input: he confirmed door-jamb depth doesn't affect the calculation method (so 6&7 can be treated the same way as 1,2,3&4), identified that the client built margin into the BOQ for 6&7, and suggested mirroring that margin into 1&2 (5.3→5.5 ML) — tightening the entrance-section reconciliation to ~3.3% under BOQ. Ended with all 8 arches resolved except one genuine open item: a second physical banquette arch confirmed to exist but not covered by any BOQ line. Rebuilt the table three times on layout feedback alone (wide scrolling table → responsive card layout → back to a real table fixed to A4 landscape width) before landing on something that actually displays without cutoff.
+
+Studied (read-only, no changes per explicit instruction) `260804_K5M_Internal Central COC.xlsx` — Shagun's own in-progress build on Desktop, not yet in git. Confirmed healthy (clean zip check, opens without a repair prompt). Five sheets: FFE_Main Data Sheet (exact match to canonical scope), Change Log, FFE_Fabrics and FFE_Hard Material (evolved Material Package structure with real per-material Client/Supplier/China Office Remarks/Translation threads), and a Shop Drawing Tracker built from the structure designed with Claude on 4 Aug — now populated with real SHD00 feedback for all 17 FFE items (63 remarks, all still unresolved, 44 already have an Action/Action Owner noted). SHD01/SHD02 still empty. This is visibly the COC rebuild agreed 3 Aug, now well underway.
+
+Opened a discussion (not yet resolved) on restructuring the Material Package into three trackers — Main Central (confirmed to mean the COC itself), Client-facing, and Supplier-facing — same column format across all three, diverging only where sensitive information starts. Found the two SharePoint locations Shagun linked map to real OneDrive folders already in active use, including a previously-unlogged `260805_K5M_Tracker Updates Arlene` folder (unprotected copies with Shagun's own remarks) — confirmed Arlene is a real, recurring party in the fabric/hard-material feedback loop via the Central COC's remark columns.
+
+Added **`#STOP`** to the Command Center — an immediate hard interrupt, distinct from a plain "wait."
+
+Designed a new mail-monitoring system: `#GoodMorning` (extended) and a new `#checkmail` command will check Outlook for anything tagged/subject-prefixed "K5M," log it (sender/subject/date/summary/matched Umbrella Task) to a new `004_communication/K5M_Mail_Log.md`, and flag anything described in an email that isn't yet reflected in the Task Tracker or Dev Log. Logged as a `#newtask` (installing the MCP access), then found a **hard blocker** testing it: the `outlook-email-drafter` connector authenticates fine but Wood Couture's Microsoft 365 tenant has an Application Access Policy blocking this class of app from reading any mailbox — needs IT/admin action, not a personal authorization step.
+
+Ran `#totalcheck`: marked S.No.14 and S.No.38 Done (SHD00 collation, Resti's arch calc write-up), marked S.No.5 Stale as a duplicate of S.No.31 (both Ariel fit-out-drawings asks), caught and fixed an invalid "Blocked" status value that shouldn't have been possible — which surfaced a real gap: the Status/Umbrella Task/Priority/Type dropdown validation only covers rows 11-33, so every row added since (34 onward) has no validation at all. Logged that as its own low-priority task rather than fixing it mid-check.
+
+---
+
 ## 2026-08-04
 Distributed a full set of meeting notes from a meeting with Claire into the project's systems (contacts, Task Tracker, Calendar, new meeting folder) after a clarifying-questions pass, then executed on `#execute`. Introduced Resti (new Head of Engineering) and Tharusha (draftsman) to `CONTACT_SHEET.md`. Extended the site visit to a 2-day effort (31 Aug–1 Sep) across the Calendar's Hard Milestones and mini-calendar.
 
