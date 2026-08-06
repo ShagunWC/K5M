@@ -17,6 +17,7 @@ Open list, as of 2026-07-30:
 11. Communication Management — Internal, Production Partner, Client
 12. Site Survey Planning
 13. WDCO Internal Project Management
+14. Logistics
 
 ## Weekly report
 
@@ -31,3 +32,5 @@ Add new umbrella tasks below with a date, rather than renumbering the list above
 **2026-07-30:** Corrected — removed the short-code table added earlier. Umbrella Task values are always written in full; "UTSK" is shorthand only for the term "Umbrella Task" itself.
 
 **2026-08-04:** Expanded "Project Schedule" into "Project Schedule — Client Front, Supplier Front, Internal WDCO" to support the planned Project Calendar rebuild (shared vocabulary between the Task Tracker and Calendar; no live data link between the two files yet — that's a separate, bigger decision still pending).
+
+**2026-08-06:** Added Logistics — container booking and shipping coordination (Maria, WDCO) didn't fit any existing category.
