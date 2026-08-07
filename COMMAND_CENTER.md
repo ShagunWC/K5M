@@ -97,6 +97,20 @@ Superseded the one-file-per-day `YYMMDD_Task_List.md` markdown convention on 202
 
 ---
 
+## `#checkonedriveproject`
+
+**Says:** "#checkonedriveproject" — on-demand only. Never automatic, never folded into `#totalcheck` or any daily routine. Shagun's own habit is roughly weekly, not daily — Claude doesn't need to track or remind her of that cadence.
+
+**Does:**
+1. Compares the current OneDrive K5M folder (`Wood Couture - Live Projects_SL\K5M`) against `_K5M_File_Index.xlsx` (same folder) to find what's new or changed since the last check.
+2. Actually reads/audits the new or changed material (not just notes that it exists) for the same issue patterns found in the 2026-08-07 baseline study: naming inconsistencies, broken formulas/data quality, duplicated files, stale trackers, tracker-vs-reality mismatches.
+3. Regenerates `_K5M_File_Index.xlsx` and refreshes `_K5M_Folder_Guide.md` (both live at the OneDrive root, not in git — they carry real names/numbers the git repo's redaction rule doesn't allow) so they reflect current state, tagged by Umbrella Task at the folder level where determinable.
+4. Hands Shagun a fresh findings list. Claude does not decide what to do about any finding — she triages each one herself.
+
+The reusable, redacted version of the folder structure this is built around lives in `005_project-discovery/OneDrive_Project_Folder_Structure.md` — the starting template for any *future* project's OneDrive workspace.
+
+---
+
 ## Amendments
 
 Add new commands below with a date, rather than editing the list above, unless a command's behavior is being corrected.
@@ -118,3 +132,5 @@ Add new commands below with a date, rather than editing the list above, unless a
 **2026-08-06:** added `#STOP` — an immediate hard interrupt, distinct from a plain "wait." Stops all in-progress action and gives full attention to what Shagun says next.
 
 **2026-08-07:** Task Tracker and Project Calendar merged into one workbook, `260807_K5M_Project Management_Tasks and Calendar.xlsx` — updated every reference above accordingly. New connecting mechanism: each task's Task Number (renamed from "S.No.," see Hard Rule 8) tags the matching calendar entry as `(#N)` with a hyperlink back to its row; the Task sheet's `Logged on Calendar?` column checks for that tag and reports Yes/Missing/N/A. Tagging applies going forward, not backfilled onto existing entries. The two old separate files are superseded, not deleted.
+
+**2026-08-07:** added `#checkonedriveproject` — on-demand (weekly-ish, Shagun's own cadence, never automatic) audit of the OneDrive K5M folder against a saved file index, following a full baseline study of all ~700 files that day. Also added Umbrella Task 15, "Contractual - Client Facing" (BOQs/pricing/proposals didn't fit any existing category).
