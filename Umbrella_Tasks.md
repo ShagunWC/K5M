@@ -18,6 +18,7 @@ Open list, as of 2026-07-30:
 12. Site Survey Planning
 13. WDCO Internal Project Management
 14. Logistics
+15. Contractual - Client Facing
 
 ## Weekly report
 
@@ -34,3 +35,5 @@ Add new umbrella tasks below with a date, rather than renumbering the list above
 **2026-08-04:** Expanded "Project Schedule" into "Project Schedule — Client Front, Supplier Front, Internal WDCO" to support the planned Project Calendar rebuild (shared vocabulary between the Task Tracker and Calendar; no live data link between the two files yet — that's a separate, bigger decision still pending).
 
 **2026-08-06:** Added Logistics — container booking and shipping coordination (Maria, WDCO) didn't fit any existing category.
+
+**2026-08-07:** Added Contractual - Client Facing — BOQs, pricing comparisons, proposals, awarded packages, RFQs (the `02_COMMERCIAL` OneDrive area) didn't fit any existing category; "Project Scope" is about defining what's in scope, not pricing/contracting it.
