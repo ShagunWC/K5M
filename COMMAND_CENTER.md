@@ -8,7 +8,7 @@ Trigger phrases Shagun uses in conversation to fire a standing action. Read this
 
 **Says:** "#newtask: <description>"
 
-**Does:** Adds a new row to the K5M Task Tracker (`006_task-management-pm/260730_K5M_Task Tracker.xlsx`, or its OneDrive location once handed off) — Date Raised, the task description in full, and best-guess Umbrella Task (written in full — no abbreviations; "UTSK" is only ever shorthand for the term "Umbrella Task" itself, not for any value)/Priority/Type of Task/Dependent On 1/Dependent On 2/Status, flagged for Shagun to correct. There is no "Owner" column — Shagun is always the default owner, so it isn't tracked per row. Commit and push immediately.
+**Does:** Adds a new row to the Task Tracker sheet in `006_task-management-pm/260807_K5M_Project Management_Tasks and Calendar.xlsx` (or its OneDrive location once handed off) — Date Raised, the task description in full, and best-guess Umbrella Task (written in full — no abbreviations; "UTSK" is only ever shorthand for the term "Umbrella Task" itself, not for any value)/Priority/Type of Task/Dependent On 1/Dependent On 2/Status, flagged for Shagun to correct. Task Number is assigned by Claude (Hard Rule 8) — it also doubles as the connecting key to the Calendar (see `#projectdevelopment`). There is no "Owner" column — Shagun is always the default owner, so it isn't tracked per row. Commit and push immediately.
 
 Superseded the one-file-per-day `YYMMDD_Task_List.md` markdown convention on 2026-07-30 — the Task Tracker is now the single running record.
 
@@ -19,9 +19,10 @@ Superseded the one-file-per-day `YYMMDD_Task_List.md` markdown convention on 202
 **Says:** "#projectdevelopment — <date> — <category> — <update> — <evidence link>" (category and evidence link are optional per entry)
 
 **Does:**
-1. Appends the entry to the "Project Development Log" tab in `260729_K5M_Project Calendar.xlsx` (`006_task-management-pm`).
+1. Appends the entry to the "Project Development Log" tab in `260807_K5M_Project Management_Tasks and Calendar.xlsx` (`006_task-management-pm`).
 2. If the update implies an actual schedule change (a date moving, a new milestone, a decision affecting an existing activity), reflects that into the Data tab and the relevant month tab too — not just logged passively.
-3. If category or evidence link is left blank, ask rather than guess or leave silently blank.
+3. If the update ties to a specific Task Tracker row, tag the calendar entry `(#TaskNumber)` and hyperlink it back to that row — this is what the Task sheet's `Logged on Calendar?` column checks against. Applies going forward on new entries; old entries weren't backfilled when the merge was built (2026-08-07).
+4. If category or evidence link is left blank, ask rather than guess or leave silently blank.
 
 ---
 
@@ -30,11 +31,11 @@ Superseded the one-file-per-day `YYMMDD_Task_List.md` markdown convention on 202
 **Says:** "#totalcheck" (or "do a total check") — only ever run when Shagun explicitly asks, never automatically at end of day without being asked.
 
 **Does, in order:**
-1. Confirms every tracker (COC files, Material Packages, Project Calendar, Task Tracker) reflects the latest agreed state — nothing discussed but not yet applied.
+1. Confirms every tracker (COC files, Material Packages, the merged Tasks and Calendar workbook) reflects the latest agreed state — nothing discussed but not yet applied.
 2. Asks Shagun for any `#projectdevelopment` updates from today that haven't been logged yet — don't assume everything worth logging was already flagged live during the day.
 3. Tags every one of today's `#newtask` entries and Development Log entries with its Umbrella Task, written in full (see `Umbrella_Tasks.md`, same branch — no abbreviations for the values themselves; "UTSK" is only ever shorthand for the term "Umbrella Task") — tagging happens in this end-of-day batch, not live at the moment each entry is created.
 4. **This is where Woody does the actual tracker upkeep** (see "Woody" below): review every open row, mark anything no longer relevant/actionable as **Stale** in the Status column, and hide that row (never delete it). The Task Tracker must be clean and current by the end of this step — that's what makes tomorrow's `#GoodMorning` view trustworthy.
-5. Confirms the Task Tracker (wherever it currently lives — OneDrive once Shagun hands it off) reflects every task raised today, with Status/Dependent On/Priority updated for anything that changed during the day.
+5. Confirms the Task Tracker sheet (wherever the merged workbook currently lives — OneDrive once Shagun hands it off) reflects every task raised today, with Status/Dependent On/Priority updated for anything that changed during the day.
 6. Confirms all of today's file changes are actually pushed to the correct branch in git — nothing sitting locally only.
 7. Confirms `DAILY_LOG.md` has today's entry.
 8. Updates `PROJECT_BRIEFING.md`'s "Where we left off" section (main branch) so it reflects today's actual state — not just `DAILY_LOG.md`. This is what a brand-new session (or `SESSION_START.md`) reads to get caught up; it must never be allowed to go stale again the way it did before 2026-08-04.
@@ -46,7 +47,7 @@ Superseded the one-file-per-day `YYMMDD_Task_List.md` markdown convention on 202
 
 **Says:** "#GoodMorning"
 
-**Does:** opens the actual K5M Task Tracker file directly (from its OneDrive location once handed off) so Shagun can view the full, current tracker herself. She builds her own day's schedule from it — this does **not** generate a filtered "my day" list or a summary; it just opens the live file. It should already be clean and up to date, because the previous evening's `#totalcheck` did that work.
+**Does:** opens `260807_K5M_Project Management_Tasks and Calendar.xlsx` directly (from its OneDrive location once handed off) so Shagun can view the full, current tracker herself. She builds her own day's schedule from it — this does **not** generate a filtered "my day" list or a summary; it just opens the live file. It should already be clean and up to date, because the previous evening's `#totalcheck` did that work. Also checks Outlook for anything tagged/subject-prefixed "K5M" since the last check and reports what's new — see the mail-monitoring design in `DAILY_LOG.md`, 2026-08-06 (currently blocked at the Wood Couture tenant level, not yet functional).
 
 ---
 
@@ -115,3 +116,5 @@ Add new commands below with a date, rather than editing the list above, unless a
 **2026-08-04:** added a `#totalcheck` step to update `PROJECT_BRIEFING.md`'s "Where we left off" section daily — it had gone stale (still describing 2026-07-24's initial onboarding) because it was only ever updated on an ad-hoc basis. `#totalcheck` is the natural daily checkpoint to keep it current.
 
 **2026-08-06:** added `#STOP` — an immediate hard interrupt, distinct from a plain "wait." Stops all in-progress action and gives full attention to what Shagun says next.
+
+**2026-08-07:** Task Tracker and Project Calendar merged into one workbook, `260807_K5M_Project Management_Tasks and Calendar.xlsx` — updated every reference above accordingly. New connecting mechanism: each task's Task Number (renamed from "S.No.," see Hard Rule 8) tags the matching calendar entry as `(#N)` with a hyperlink back to its row; the Task sheet's `Logged on Calendar?` column checks for that tag and reports Yes/Missing/N/A. Tagging applies going forward, not backfilled onto existing entries. The two old separate files are superseded, not deleted.
