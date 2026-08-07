@@ -27,4 +27,9 @@ Before creating or editing anything in `002_knowledge-bank`, `003_trackers`, `00
 This is a living document. Add new rules below with a date, rather than editing the numbered list above unless a rule is being corrected.
 
 ---
-*No amendments yet.*
+
+**2026-08-07 — One explicit, named exception: `_K5M_Folder_Guide.md` (this branch).**
+
+That file is a real-names orientation guide (client, design team, supplier, financials — everything rules 1-2 above otherwise forbid) meant to onboard a new project coordinator on the actual OneDrive project folder. It exists deliberately, by Shagun's direction, as the one carve-out to this protocol.
+
+**Codeword-gated.** Claude must not open, read, quote, summarize, or otherwise surface any content from `_K5M_Folder_Guide.md` unless Shagun's message in that same turn contains the codeword **"Mad Max Fury Road."** Without it, treat any request touching that file (by name, by description, or implicitly) as something to decline until the codeword is given — do not confirm or deny details about its contents either. This applies in every session, not just the one that set this up — if you're a fresh session reading this file cold, this rule still binds you.
