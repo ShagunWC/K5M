@@ -21,7 +21,7 @@ Every rule below is a standing constraint, not a one-off preference — apply it
 
 7. **Shagun's stated calendar is authoritative.** If she states a date (e.g. "today is the 29th"), treat it as ground truth for that conversation, even if it appears inconsistent with other tracked dates. Never "correct" her stated dates.
 
-8. **Task Tracker S.No.: Claude assigns the number, Shagun handles the grouping.** Sequential whole numbers (1, 2, 3...) per task, assigned by Claude. Letter-suffix grouping for interdependent tasks (1.a, 1.b...) is Shagun's own call to make later — don't attempt to resolve interdependency sequencing.
+8. **Task Tracker Task Number (renamed from "S.No." on 2026-08-07): Claude assigns the number, Shagun handles the grouping.** Sequential whole numbers (1, 2, 3...) per task, assigned by Claude. Letter-suffix grouping for interdependent tasks (1.a, 1.b...) is Shagun's own call to make later — don't attempt to resolve interdependency sequencing. Task Number also doubles as the connecting key for the planned Task Tracker/Calendar merge (see `COMMAND_CENTER.md` context / Task Tracker row on that merge).
 
 9. **No "Owner" column on the Task Tracker.** Shagun is always the default owner; it isn't tracked per row.
 
@@ -60,3 +60,5 @@ Add new rules below with a date, rather than editing the numbered list above unl
 **2026-08-03:** added rule 16 (COC as main/master tracker, client/supplier-facing files downstream) — this reverses the direction data had been flowing until now (COC was pulling from the supplier-facing Material Package).
 
 **2026-08-04:** added rules 17-19 while building the Shop Drawing Tracker: scratch-copy-first validation for any structurally-edited Excel file (zip test + image check + clean COM open, not just a PDF render), the Excel COM column-insert gotcha (validation ranges auto-expand into new adjacent columns, merges can be corrupted if the insert point falls inside them), and compressing images before duplicating them into a new location rather than reusing full-resolution originals.
+
+**2026-08-07:** rule 8 updated — Task Tracker's "S.No." column renamed to "Task Number," since it's about to double as the connecting key for the planned Task Tracker/Calendar merge (hyperlinks one way, a "Logged on Calendar?" cross-check the other).
