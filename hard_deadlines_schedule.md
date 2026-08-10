@@ -27,8 +27,6 @@ Total span M1 → M8: 124 calendar days.
 2. Same supplier — both scopes are packed at the same time, so one 5-day loading/export-customs window applies once (M3→M4), not separately per scope.
 3. All durations are calendar days, not working days.
 4. The 60-day transit figure (M4→M5) already includes Maria Al Balushi's 10–15 day contingency buffer (confirmed 7 Aug).
-5. Weekends/public holidays (e.g., Mawlid) are not separately excluded from any duration above.
-
 ## Basis
 
 Worked backward, in order, from the 20 Dec handover, using durations supplied directly by Shagun Gupta on 2026-08-10: 15 days fitout installation, 10 days port-offload-to-site, 60 days container transit, 5 days loading/customs, 15 days fitout production, 30 days FFE production.
