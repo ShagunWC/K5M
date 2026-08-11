@@ -38,6 +38,7 @@ Every rule below is a standing constraint, not a one-off preference — apply it
    **Fitout scope base file is not yet decided** — expected to be confirmed the week of 2026-08-03; add its own entry here once confirmed, don't assume it's the same file or convention as FFE.
 
 15. **Any COM automation script touching Excel/PowerPoint/Word must use `win32com.client.DispatchEx`, never bare `Dispatch`.** `Dispatch` attaches to an already-running instance if one exists (e.g. Shagun's own open window) — the script's own cleanup `Quit()` then closes her whole session, same failure mode as force-killing the process, just via a "graceful" call instead of `-Force`. `DispatchEx` always starts an independent process, so `Quit()` only ever closes what the script itself opened.
+   → `WDCO_MICROSOFT365_NOTES.md` for the fuller set of COM/Microsoft 365-specific gotchas learned since (OneDrive file locks, in-cell images, clipboard fragility, PowerPoint export quirks).
 
 16. **The COC is the main/master material tracker.** Shagun works on it directly with Claude. The client-facing and supplier-facing Material Package trackers are downstream copies — updated *from* the COC, not the other way around. What exactly flows into each downstream file is decided case by case, not automatically mirrored.
 
@@ -48,6 +49,7 @@ Every rule below is a standing constraint, not a one-off preference — apply it
 19. **When copying an image into a new location in a workbook (not just preserving an existing one), compress/resize it — don't reuse the full-resolution original.** Duplicating full-resolution images doubles a file's embedded-image weight for no display benefit; this is the same root cause already flagged as a risk on the 36MB COC.
 
 20. **Never write directly to a OneDrive-synced file.** When a task requires editing a file that lives on OneDrive, copy it to the Desktop first and do all work there. Once Shagun confirms the Desktop version is final, she moves it to OneDrive herself — that move is not Claude's job. This is a hard requirement now, not just a preference: live COM automation against a OneDrive-synced file has repeatedly failed unpredictably (leaving orphaned Excel processes), while the identical script worked instantly against a local Desktop copy every time.
+   → `WDCO_MICROSOFT365_NOTES.md` §1 for why this happens.
 
 ---
 
