@@ -19,6 +19,7 @@ Open list, as of 2026-07-30:
 13. WDCO Internal Project Management
 14. Logistics
 15. Contractual - Client Facing
+16. Site Management
 
 ## Weekly report
 
@@ -37,3 +38,5 @@ Add new umbrella tasks below with a date, rather than renumbering the list above
 **2026-08-06:** Added Logistics — container booking and shipping coordination (Maria, WDCO) didn't fit any existing category.
 
 **2026-08-07:** Added Contractual - Client Facing — BOQs, pricing comparisons, proposals, awarded packages, RFQs (the `02_COMMERCIAL` OneDrive area) didn't fit any existing category; "Project Scope" is about defining what's in scope, not pricing/contracting it.
+
+**2026-08-11:** Added Site Management — on-the-ground execution coordination (e.g. sourcing/vetting a local installer) didn't fit any existing category; those are all pre-site planning/documentation, not physical site execution.
