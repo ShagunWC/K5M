@@ -47,6 +47,8 @@ Every rule below is a standing constraint, not a one-off preference — apply it
 
 19. **When copying an image into a new location in a workbook (not just preserving an existing one), compress/resize it — don't reuse the full-resolution original.** Duplicating full-resolution images doubles a file's embedded-image weight for no display benefit; this is the same root cause already flagged as a risk on the 36MB COC.
 
+20. **Never write directly to a OneDrive-synced file.** When a task requires editing a file that lives on OneDrive, copy it to the Desktop first and do all work there. Once Shagun confirms the Desktop version is final, she moves it to OneDrive herself — that move is not Claude's job. This is a hard requirement now, not just a preference: live COM automation against a OneDrive-synced file has repeatedly failed unpredictably (leaving orphaned Excel processes), while the identical script worked instantly against a local Desktop copy every time.
+
 ---
 
 ## Amendments
@@ -62,3 +64,5 @@ Add new rules below with a date, rather than editing the numbered list above unl
 **2026-08-04:** added rules 17-19 while building the Shop Drawing Tracker: scratch-copy-first validation for any structurally-edited Excel file (zip test + image check + clean COM open, not just a PDF render), the Excel COM column-insert gotcha (validation ranges auto-expand into new adjacent columns, merges can be corrupted if the insert point falls inside them), and compressing images before duplicating them into a new location rather than reusing full-resolution originals.
 
 **2026-08-07:** rule 8 updated — Task Tracker's "S.No." column renamed to "Task Number," since it's about to double as the connecting key for the planned Task Tracker/Calendar merge (hyperlinks one way, a "Logged on Calendar?" cross-check the other).
+
+**2026-08-11:** added rule 20 (never write directly to OneDrive files) — prompted by four consecutive failed COM automation attempts against the live `260727_K5M_Material Package_Fitout.xlsx` (each leaving an orphaned Excel process), resolved only once Shagun provided a Desktop copy to work from instead.
