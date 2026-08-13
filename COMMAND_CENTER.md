@@ -49,6 +49,8 @@ Superseded the one-file-per-day `YYMMDD_Task_List.md` markdown convention on 202
 
 **Does:** opens `260807_K5M_Project Management_Tasks and Calendar.xlsx` directly (from its OneDrive location once handed off) so Shagun can view the full, current tracker herself. She builds her own day's schedule from it — this does **not** generate a filtered "my day" list or a summary; it just opens the live file. It should already be clean and up to date, because the previous evening's `#totalcheck` did that work. Also checks Outlook for anything tagged/subject-prefixed "K5M" since the last check and reports what's new — see the mail-monitoring design in `DAILY_LOG.md`, 2026-08-06 (currently blocked at the Wood Couture tenant level, not yet functional).
 
+Also gives a standing reminder: **check Sreejith's onboarding checklist** (`260813_WC_PC_Onboarding_Checklist.md`, `007_wdco-internal-team-management`) — just the reminder itself, not a status readout of which boxes are checked.
+
 ---
 
 ## `#ShowMeMyKanban`
@@ -134,3 +136,5 @@ Add new commands below with a date, rather than editing the list above, unless a
 **2026-08-07:** Task Tracker and Project Calendar merged into one workbook, `260807_K5M_Project Management_Tasks and Calendar.xlsx` — updated every reference above accordingly. New connecting mechanism: each task's Task Number (renamed from "S.No.," see Hard Rule 8) tags the matching calendar entry as `(#N)` with a hyperlink back to its row; the Task sheet's `Logged on Calendar?` column checks for that tag and reports Yes/Missing/N/A. Tagging applies going forward, not backfilled onto existing entries. The two old separate files are superseded, not deleted.
 
 **2026-08-07:** added `#checkonedriveproject` — on-demand (weekly-ish, Shagun's own cadence, never automatic) audit of the OneDrive K5M folder against a saved file index, following a full baseline study of all ~700 files that day. Also added Umbrella Task 15, "Contractual - Client Facing" (BOQs/pricing/proposals didn't fit any existing category).
+
+**2026-08-13:** `#GoodMorning` extended with a standing reminder to check Sreejith's (new Project Coordinator) onboarding checklist — added while setting up `007_wdco-internal-team-management`. Just the reminder, not a checklist-completion status check.
