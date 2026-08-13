@@ -51,6 +51,8 @@ Every rule below is a standing constraint, not a one-off preference — apply it
 20. **Never write directly to a OneDrive-synced file.** When a task requires editing a file that lives on OneDrive, copy it to the Desktop first and do all work there. Once Shagun confirms the Desktop version is final, she moves it to OneDrive herself — that move is not Claude's job. This is a hard requirement now, not just a preference: live COM automation against a OneDrive-synced file has repeatedly failed unpredictably (leaving orphaned Excel processes), while the identical script worked instantly against a local Desktop copy every time.
    → `WDCO_MICROSOFT365_NOTES.md` §1 for why this happens.
 
+21. **When Shagun says "give me a PDF," always ask first which kind she means: a straight export of what's on screen, or a printable version (fixed paper size, single page, print-optimized layout)?** These are genuinely different jobs, not two flavors of the same export. A screen export is fast — render what exists as-is. A printable version means fitting an on-screen (usually responsive) layout into a hard page-size constraint it wasn't designed against, which is closer to a print-layout redesign: it takes real iteration (shrink → regenerate → measure the exact overflow → repeat), because there's no "shrink to fit one page" feature in headless PDF export. Don't guess which one is wanted and don't default to either — the two have very different time costs, and guessing wrong means redoing the work.
+
 ---
 
 ## Amendments
@@ -68,3 +70,5 @@ Add new rules below with a date, rather than editing the numbered list above unl
 **2026-08-07:** rule 8 updated — Task Tracker's "S.No." column renamed to "Task Number," since it's about to double as the connecting key for the planned Task Tracker/Calendar merge (hyperlinks one way, a "Logged on Calendar?" cross-check the other).
 
 **2026-08-11:** added rule 20 (never write directly to OneDrive files) — prompted by four consecutive failed COM automation attempts against the live `260727_K5M_Material Package_Fitout.xlsx` (each leaving an orphaned Excel process), resolved only once Shagun provided a Desktop copy to work from instead.
+
+**2026-08-13:** added rule 21 (always ask "screen export or printable?" for a PDF request) — prompted by a Project Coordinator onboarding mind map that took much longer than expected to turn into a PDF: the first ask was assumed to be a simple screen export, but what was actually wanted was a single-page, print-ready A3 landscape layout, which needed real iterative redesign (shrinking content, hunting down a print-pagination gotcha where flex/grid blocks jump to the next page whole rather than partially overflowing) rather than a straight render.
