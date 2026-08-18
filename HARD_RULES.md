@@ -23,7 +23,7 @@ Every rule below is a standing constraint, not a one-off preference — apply it
 
 8. **Task Tracker Task Number (renamed from "S.No." on 2026-08-07): Claude assigns the number, Shagun handles the grouping.** Sequential whole numbers (1, 2, 3...) per task, assigned by Claude. Letter-suffix grouping for interdependent tasks (1.a, 1.b...) is Shagun's own call to make later — don't attempt to resolve interdependency sequencing. Task Number also doubles as the connecting key for the planned Task Tracker/Calendar merge (see `COMMAND_CENTER.md` context / Task Tracker row on that merge).
 
-9. **No "Owner" column on the Task Tracker.** Shagun is always the default owner; it isn't tracked per row.
+9. **The Task Tracker has a "Task Owner" column (added 2026-08-18, once the team grew beyond just Shagun).** Every task — existing and new — gets an explicit owner; default to Shagun only when no one else is specified. This supersedes the original rule ("no Owner column, Shagun is always default") from when she was the only person on the tracker.
 
 10. **Material Package styling is frozen: Lato, size 11, black borders.** No further formatting changes without explicit new direction.
 
@@ -72,3 +72,5 @@ Add new rules below with a date, rather than editing the numbered list above unl
 **2026-08-11:** added rule 20 (never write directly to OneDrive files) — prompted by four consecutive failed COM automation attempts against the live `260727_K5M_Material Package_Fitout.xlsx` (each leaving an orphaned Excel process), resolved only once Shagun provided a Desktop copy to work from instead.
 
 **2026-08-13:** added rule 21 (always ask "screen export or printable?" for a PDF request) — prompted by a Project Coordinator onboarding mind map that took much longer than expected to turn into a PDF: the first ask was assumed to be a simple screen export, but what was actually wanted was a single-page, print-ready A3 landscape layout, which needed real iterative redesign (shrinking content, hunting down a print-pagination gotcha where flex/grid blocks jump to the next page whole rather than partially overflowing) rather than a straight render.
+
+**2026-08-18:** rule 9 corrected — the Task Tracker now has a "Task Owner" column, added once Sreejith (new Project Coordinator) started getting his own tasks logged. The original "no Owner column, Shagun is always default" premise only held while she was the sole person on the tracker. Structural edit done via Excel COM (unmerge title-banner rows spanning into the insert point → insert column → re-merge over the new width → backfill existing rows with "Shagun"), validated (zip-integrity, clean COM reopen, visual render) before delivery, per rule 17. Also found and left in place (flagged, not fixed, out of scope for this edit) a pre-existing bug: the Umbrella Task and Priority columns' dropdown validation lists are swapped with each other — worth its own dedicated fix.
